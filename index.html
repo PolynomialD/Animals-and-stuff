@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Website1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body class="mainpage" onload="animate_string('headerText')">
+    <div>
+        <nav class="nav-container col-md-2 col-sm-12">
+            <h2 class="center-text">Menu</h2>
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active"><a href="#" onclick="changePage('previewDog')">Dogs</a></li>
+                <li><a href="#" onclick="changePage('previewCat')">Cats</a></li>
+                <li><a href="#" onclick="changePage('previewRabbit')">Rabbits</a></li>
+                <li><a href="#" onclick ="changePage('previewPig')" >Pigs</a></li>
+            </ul>
+            <form>
+                <legend>login</legend>
+                <div class="form-group">
+                    <label for="usernameLogin">username</label>
+                    <input id="usernameLogin"class="form-control" type="text" name="username">
+                </div>
+                <div class="form-group">
+                    <label for="password">password</label>
+                    <input class="form-control is-invalid" type="password" name="password">
+                </div>
+                <button class="btn btn-primary" type="button" onclick="loginAlert()">login</button>
+            </form>
+            <form>
+                <legend>register</legend>
+                <div class="form-group">
+                    <label for="username">username</label>
+                    <input type="text" class="form-control" name="username" />
+                </div>
+                <div class="form-group">
+                <label for="password">password</label>
+                <input id="password" class="form-control" type="password" name="password" />
+                </div>
+                <div class="form-group">
+                <label for="password">confirm password</label>
+                <input id="passwordConfirm" class="form-control" type="password" name="passwordConfirm" onkeyup="checkPasswords()" />
+                </div>
+                <input class="btn btn-primary" type="submit" value="confirm"/>
+            </form>
+                <div class="fib-container">
+                    <h2 class=>Fib</h2>
+                        <p>Enter a number</p>
+                        <input id = "fibInput" class="form-control" type="text" name="places"> 
+                        <input onclick="doFib()" class="btn btn-primary fib-button" type="submit" value="confirm"/><br><br>
+                        <p id="hiddenfib"></p>
+                </div>
+        </nav>
+        <div class="main-container col-md-8 col-sm-12">
+            <header class="main-header content-box">
+                <a id="headerText" class="center-text home-link" onclick = "buildMainPreviewPage(dogPreviews, catPreviews, rabbitPreviews, pigPreviews)" >Animals and stuff </a>
+            </header>
+            <div id="content" class="content-container"></div>
+        </div>
+        <div class="main-ad-container">
+            <div class="link-container">
+                <a class="myButton btn" onclick="newWindow('https://www.google.co.uk/')">google</a>
+                <a class="myButton btn" onclick="newWindow('https://www.w3schools.com/js/default.asp')">W3C JS</a>
+                <a class="myButton btn" onclick="newWindow('https://stackoverflow.com/')">Stack Overflow</a>
+        </div>
+            <div id = "sub-ad-container">
+            <div class="ad-container col-md-2 row center-text">
+                <h2>ads</h2>
+            </div>
+            <div class="ad-container col-md-2 row center-text">
+                <h2 class=>ads</h2>
+            </div>
+            <div class="ad-container col-md-2 row center-text">
+                <h2>ads</h2>
+            </div>
+            <div class="ad-container col-md-2 row center-text">
+                <h2>ads</h2>
+            </div>
+        </div>
+        </div>
+    <div class="footer col-md-12"> 
+        <footer id="pageLinks">
+            <a  href="about.html" title="more info">About</a>
+        </footer>
+    </div>
+</body>
+<script src="js/main.js"></script>
+</html>
